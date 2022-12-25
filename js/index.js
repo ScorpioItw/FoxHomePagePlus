@@ -21,11 +21,14 @@ base.style.height = fixedHeight + 'px';
 //     base.style.height = vw;
 // }
 
+window.onload = function () {
+    tip(3, '欢迎使用狐尼克起始页')
+}
+
 document.addEventListener('contextmenu', function (e) {
     // 禁选右键菜单
     e.preventDefault();
 })
-
 
 var bg = document.querySelector('.bg');
 var searchLogo = document.querySelector('.search_logo');
@@ -118,6 +121,11 @@ function tip(num, text) {
     }
     // 提示框内容部分
     if (Boolean(text) == true) {    // boolean内容为空返回false
+        if (text.length >= 8) {
+            tipsText.style.marginLeft = '20px';
+        } else {
+            tipsText.style.marginLeft = '0px';
+        }
         tipsText.innerHTML = text
     } else {
         if (num == 0) {
@@ -147,19 +155,20 @@ var text = document.querySelector('.text');
 var textName = document.querySelector('.text-name');
 var textP = document.querySelector('.text-p');
 
-// var tipValue = document.querySelector('.tip').getElementsByTagName('span')[0];
 
 setTimeout(function () {
     if (Boolean(str) == false) {
         // tipValue.innerHTML = '网络连接失败或api异常';
-        tip(1, '网络连接失败或api异常')
+        tip(1, '网络连接失败')
+        base.style.background = "url('../img/index.jpg') center center no-repeat";  //静态网页测试用
+
     } else {
         if (getStr[0].length <= 20 && getStr[1].length <= 20) {
             textP.innerText = '「 ' + getStr[0] + ' 」';
             textName.innerText = '——' + getStr[1];
         }
     }
-}, 1000);
+}, 500);
 
 
 var textOptions = document.querySelector('.text-options');  // 获取美文选项按钮
