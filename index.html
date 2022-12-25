@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狐尼克起始页</title>
+    <link rel='icon' href='img/logo.ico'>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="base" id="base">
+        <div class="bg"></div>
+        <div class="body">
+            <div class="tipsBox">
+                <div class="tips">
+                    <div class="tipsLogo">
+                        <svg width="100%" height="100%" viewBox="0 0 200 200">
+                            <!-- circle 绘制圆   fill 填充颜色   stroke 边框颜色     stroke-width 边框宽度   cx 圆心x   r为圆半径 -->
+                            <circle fill="none" stroke="#68e534" stroke-width="10" cx="100" cy="100" r="90"
+                                stroke-linecap="round" class="circle">
+                            </circle>
+                            <!-- polyline 绘制路径   points 端点     stroke-linecap 顶端圆角     stroke-linejoin 连接处圆角 -->
+                            <polyline fill="none" stroke="#68e534" stroke-width="14" points="55,87 95,124 145,75"
+                                stroke-linecap="round" stroke-linejoin="round" class="tick">
+                            </polyline>
+                        </svg>
+                        <svg width="100%" height="100%" viewBox="0 0 200 200">
+                            <circle fill="none" stroke="#ff5252" stroke-width="10" cx="100" cy="100" r="90"
+                                stroke-linecap="round" class="circle">
+                            </circle>
+                            <polyline fill="none" stroke="#ff5252" stroke-width="14" points="60,65 145,140"
+                                stroke-linecap="round" class="error-f">
+                            </polyline>
+                            <polyline fill="none" stroke="#ff5252" stroke-width="14" points="60,140 145,65"
+                                stroke-linecap="round" class="error-s">
+                            </polyline>
+                        </svg>
+                        <svg width="100%" height="100%" viewBox="0 0 200 200">
+                            <circle fill="none" stroke="#ffdd59" stroke-width="10" cx="100" cy="100" r="90"
+                                stroke-linecap="round" class="circle">
+                            </circle>
+                            <polyline fill="none" stroke="#ffdd59" stroke-width="14" points="101,59 101,111"
+                                stroke-linecap="round">
+                            </polyline>
+                            <circle fill="#ffdd59" stroke-width="10" cx="101" cy="150" r="10" class="point"></circle>
+                        </svg>
+                        <svg width="100%" height="100%" viewBox="0 0 200 200">
+                            <circle fill="none" stroke="#0fbcf9" stroke-width="10" cx="100" cy="100" r="90"
+                                stroke-linecap="round" class="circle">
+                            </circle>
+                            <circle fill="#0fbcf9" stroke-width="10" cx="101" cy="59" r="10" class="point"></circle>
+                            <polyline fill="none" stroke="#0fbcf9" stroke-width="14" points="101,98 101,150"
+                                stroke-linecap="round">
+                            </polyline>
+                        </svg>
+                    </div>
+                    <div class="tipsText">提示词部分</div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="time">
+                    <div class="timeText">00:00</div>
+                </div>
+                <div class="search_bar">
+                    <input placeholder="Search" onkeypress="getKey()">
+                    <div class="search_logo">
+                        <svg class="icon" viewBox="0 0 1035 1024" width="100%" height="100%">
+                            <path
+                                d="M1013.852766 1011.332492a42.225028 42.225028 0 0 1-59.70619 0L702.316509 759.502424a428.900723 428.900723 0 1 1 133.958901-196.00858 41.718328 41.718328 0 0 1-4.919216 14.166497c-1.330088 3.61024-2.385714 7.347155-3.800252 10.91517l-2.385714-2.385714a42.225028 42.225028 0 0 1-72.690386-29.13527l-0.380025-3.905815a41.950565 41.950565 0 0 1 11.379645-28.670794l-3.926928-3.905815a336.976836 336.976836 0 1 0-88.123633 150.764463 6.333754 6.333754 0 0 0 0.612262-0.928951l61.120729 1.055626 145.254096 145.232984 0.274463-0.274463 135.12009 135.12009a42.225028 42.225028 0 0 1 0.042225 59.79064z"
+                                fill="var(--bg-color)" p-id="4295">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+                <div class=" text">
+                    <div class="text-style"><span></span></div>
+                    <div class="text-options">
+                        <svg t="1671096217357" class="icon" viewBox="0 0 1024 1024" width="100%" height="100%">
+                            <path d="M288 512m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" fill="var(--bg-color)"></path>
+                            <path d="M512 512m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" fill="var(--bg-color)"></path>
+                            <path d="M736 512m-64 0a64 64 0 1 0 128 0 64 64 0 1 0-128 0Z" fill="var(--bg-color)"></path>
+                        </svg>
+                    </div>
+                    <div class="text-options-box">
+                        <ul>
+                            <li class="copy">复制</li>
+                            <li class="sou">搜索</li>
+                        </ul>
+                    </div>
+                    <li class="text-p">「 最是人间留不住，朱颜辞镜花辞树。 」</li>
+                    <li class="text-name">—— 王国维</li>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://yijuzhan.com/api/word.php?m=js"></script>
+<script src="js/index.js"></script>
+
+
+</html>
