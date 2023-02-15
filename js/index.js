@@ -219,7 +219,7 @@ textOptionsBox.addEventListener('click', function (e) {     // 美文功能盒�
             tip(0, '复制成功');
             textOptionsBox.style.display = 'none';
         } else if (e.target.className == 'sou') {
-            console.log('sou');
+            console.warn('搜素功能未开放');
         }
     }
 })
@@ -243,14 +243,14 @@ document.addEventListener('click', function () {    // 文档点击事件
 var textStyle = document.querySelector('.text-style');
 textStyle.addEventListener('click', function (e) {  // 美文水波纹动画
 
-    console.log(e.target.offsetLeft);
+    // console.log(e.target.offsetLeft);
     let x = e.clientX - e.target.getBoundingClientRect().left;
     let y = e.clientY - e.target.getBoundingClientRect().top;
-    console.log(x);
+    // console.log(x);
 
     let ripples = this.getElementsByTagName('span')[0];
     ripples.style.display = 'block';
-    console.log(ripples);
+    // console.log(ripples);
     ripples.style.left = x + 'px';
     ripples.style.top = y + 'px';
 
