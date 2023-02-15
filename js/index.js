@@ -35,6 +35,7 @@ var searchLogo = document.querySelector('.search_logo');
 // console.log(bg);
 
 input.onclick = function () { //搜索被点击时
+    input.style.caretColor = 'black';   // 改变光标颜色
     input.setAttribute('placeholder', '');  // 清空提示词
     search.style.width = maxWidth;   // 搜索框被点击放大效果
     search.style.backgroundColor = 'rgba(255, 255, 255, .9)';
@@ -44,6 +45,7 @@ input.onclick = function () { //搜索被点击时
     click = 1;
 }
 input.onblur = function () {  //搜索失去焦点时
+    input.style.caretColor = 'transparent';   // 还原光标颜色
     input.setAttribute('placeholder', 'Search');    // 还原提示词
     search.style.width = '230px';
     input.value = '';   // 失去焦点清空搜索内容
