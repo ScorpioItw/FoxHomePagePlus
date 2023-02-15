@@ -1,5 +1,6 @@
 var search = document.querySelector('.search_bar');
 var input = document.querySelector("input");
+var Body = document.querySelector(".body");
 var click = 0; // 0未点击 1点击
 
 var root = document.querySelector(':root');
@@ -158,15 +159,17 @@ var getStr = str;
 var text = document.querySelector('.text');
 var textName = document.querySelector('.text-name');
 var textP = document.querySelector('.text-p');
-
+var img = document.querySelector('.img');
 
 setTimeout(function () {
     if (Boolean(str) == false) {
         // tipValue.innerHTML = '网络连接失败或api异常';
         tip(1, '网络连接失败')
-        base.style.background = "url('../img/index.jpg') center center no-repeat";  //静态网页测试用
-
+        img.src = './img/index.jpg';//静态网页测试用
+        Body.style.backgroundImage = ('radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, .3) 166%)')
     } else {
+        img.src = 'https://bing.img.run/uhd.php';
+        Body.style.backgroundImage = ('radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, .3) 166%)');
         if (getStr[0].length <= 20 && getStr[1].length <= 20) {
             textP.innerText = '「 ' + getStr[0] + ' 」';
             textName.innerText = '——' + getStr[1];
