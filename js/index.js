@@ -55,8 +55,10 @@ input.onblur = function () {  //搜索失去焦点时
 
 }
 search.onmouseover = function () {  //鼠标经过搜索框时
-    search.style.width = maxWidth;   // 鼠标经过放大效果
-    search.style.backgroundColor = 'rgba(255, 255, 255, .6)';
+    if (click == 0) {   // 写一个判断条件解决搜素展开时任然变换颜色
+        search.style.width = maxWidth;   // 鼠标经过放大效果
+        search.style.backgroundColor = 'rgba(255, 255, 255, .6)';
+    }
 }
 search.onmouseout = function () {  //鼠标离开搜索框时
     if (click == 0) {

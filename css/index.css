@@ -341,12 +341,15 @@ body {
     /* 搜索样式 */
     outline: 0;
     border: none;
-    width: 100%;
+    /* 设置input大小解决内容溢出问题 */
+    width: 80%;
     height: 100%;
     color: inherit;
     background-color: transparent;
     font-size: 14px;
     text-align: center;
+    /* border-style: solid; */
+    margin-left: 10%;
 }
 
 .search_logo {
