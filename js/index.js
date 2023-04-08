@@ -168,7 +168,7 @@ setTimeout(function () {
         img.src = './img/index.jpg';//静态网页测试用
         Body.style.backgroundImage = ('radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, .3) 166%)')
     } else {
-        img.src = 'https://bing.img.run/uhd.php';
+        img.src = 'https://bing.shangzhenyang.com/api/1080p';
         Body.style.backgroundImage = ('radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, .5) 100%), radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, .3) 166%)');
         if (getStr[0].length <= 20 && getStr[1].length <= 20) {
             textP.innerText = '「 ' + getStr[0] + ' 」';
