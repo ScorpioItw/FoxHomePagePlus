@@ -259,4 +259,3 @@ textStyle.addEventListener('click', function (e) {  // 美文水波纹动画
 
     this.appendChild(ripples);
 })
-
